@@ -16,8 +16,25 @@ picture {
   max-width: 100%;
 }
 
+main {
+  gap: 2.5rem;
+}
+
+.container {
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
+  width: 100%;
   text-align: center;
 }
 
