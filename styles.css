@@ -14,6 +14,16 @@
     url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
 }
 
+:root {
+  --accent-color: hsl(4, 100%, 67%);
+  --shadow-color: hsla(4, 100%, 67%, 0.5);
+  --gradient-end: hsl(346, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -36,10 +46,21 @@ body {
   font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+
+  color: var(--dark-slate-grey);
+
+  position: relative;
+  height: 100dvh;
 }
 
 main {
   gap: 2.5rem;
+}
+
+.img img {
+  width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
 }
 
 .container {
@@ -52,10 +73,99 @@ main {
   flex-direction: column;
 }
 
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.features {
+  gap: 0.625rem;
+}
+
+.feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+
+.form-input {
+  font: inherit;
+  padding: 1em 1.25em;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--dark-slate-grey);
+  font: inherit;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: linear-gradient(
+    to bottom,
+    var(--accent-color),
+    var(--gradient-end)
+  );
+  box-shadow: 0 1rem 2rem var(--shadow-color);
+  outline: none;
+}
+
+.success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  border: none;
+  justify-content: space-between;
+
+  color: var(--dark-slate-grey);
+  transition: all 0.3s;
+
+  transform: translateY(100%);
+}
+
+.success.open {
+  transform: translateY(0);
+}
+
+.success-icon {
+  margin-bottom: 2.5rem;
+}
+
+.success-text {
+  margin-top: 50%;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.email {
+  font-weight: 700;
+}
+
 .attribution {
   position: absolute;
   bottom: 0;
   font-size: 11px;
+  margin-bottom: 0.5em;
   width: 100%;
   text-align: center;
 }

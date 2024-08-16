@@ -17,18 +17,20 @@
     <!-- Sign-up form start -->
     <main class="flex-column">
       <picture class="img">
-        <source media="(max-width: 400px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-        <source media="(min-width: 401px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <source media="(max-width: 375px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+        <source media="(min-width: 376px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Dashboard illustration">
       </picture>
 
       <section class="text-content container flex-column">
         <h1 class="title">Stay updated!</h1>
         <p class="intro">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="features">
-          <li class="feature">Product discovery and building what matters</li>
-          <li class="feature">Measuring to ensure updates are a success</li>
-          <li class="feature">And much more!</li>
+        <ul class="features flex-column">
+          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Product discovery and building
+            what matters</li>
+          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Measuring to ensure updates are a
+            success</li>
+          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">And much more!</li>
         </ul>
       </section>
       <form class="form container flex-column" id="form" novalidate>
@@ -44,13 +46,16 @@
 
     <!-- Success message start -->
 
-    <dialog class="success" id="success">
-      <h2 class="title">Thanks for subscribing!</h2>
-      <p class="confirm">
-        A confirmation email has been sent to <span class="email" id="subscriber-email">ash@loremcompany.com</span>.
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button class="btn">Dismiss message</button>
+    <dialog class="success container flex-column" id="success">
+      <section class="success-text flex-column">
+        <img class="success-icon" src="./assets/images/icon-success.svg" alt="checkmark">
+        <h2 class="title">Thanks for subscribing!</h2>
+        <p class="confirm">
+          A confirmation email has been sent to <span class="email" id="subscriber-email">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </section>
+      <button class="btn success-btn">Dismiss message</button>
     </dialog>
 
     <!-- Success message end -->
