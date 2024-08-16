@@ -50,7 +50,7 @@ body {
   color: var(--dark-slate-grey);
 
   position: relative;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 main {
@@ -61,6 +61,7 @@ main {
   width: 100%;
   max-height: 40vh;
   object-fit: cover;
+  object-position: bottom;
 }
 
 .container {
