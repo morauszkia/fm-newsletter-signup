@@ -15,31 +15,34 @@
   <body>
 
     <!-- Sign-up form start -->
-    <main class="flex-column">
+    <main>
       <picture class="img">
-        <source media="(max-width: 700px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-        <source media="(min-width: 701px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <source media="(max-width: 899)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+        <source media="(min-width: 900px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Dashboard illustration">
       </picture>
 
-      <section class="text-content container flex-column">
-        <h1 class="title">Stay updated!</h1>
-        <p class="intro">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="features flex-column">
-          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Product discovery and building
-            what matters</li>
-          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Measuring to ensure updates are a
-            success</li>
-          <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">And much more!</li>
-        </ul>
-      </section>
-      <form class="form container flex-column" id="form" novalidate>
-        <div class="input-container flex-column">
-          <label class="form-label" for="email">Email address</label>
-          <input class="form-input" type="email" placeholder="email@company.com" id="email">
-        </div>
-        <button class="btn">Subscribe to monthly newsletter</button>
-      </form>
+      <div class="form-container flex-column">
+        <section class="text-content container flex-column">
+          <h1 class="title">Stay updated!</h1>
+          <p class="intro">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="features flex-column">
+            <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Product discovery and building
+              what matters</li>
+            <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">Measuring to ensure updates are
+              a
+              success</li>
+            <li class="feature"><img src="./assets/images/icon-list.svg" alt="checkmark">And much more!</li>
+          </ul>
+        </section>
+        <form class="form container flex-column" id="form" novalidate>
+          <div class="input-container flex-column">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-input" type="email" placeholder="email@company.com" id="email">
+          </div>
+          <button class="btn">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
 
     </main>
     <!-- Sign-up form end -->

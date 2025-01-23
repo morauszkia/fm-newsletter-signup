@@ -47,14 +47,16 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 
-  color: var(--dark-slate-grey);
-
   position: relative;
   min-height: 100dvh;
 }
 
 main {
   gap: 2.5rem;
+  background-color: var(--white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .img img {
@@ -62,6 +64,10 @@ main {
   max-height: 40vh;
   object-fit: cover;
   object-position: bottom;
+}
+
+.form-container {
+  gap: 2.5rem;
 }
 
 .container {
@@ -173,4 +179,47 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 520px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-slate-grey);
+  }
+  main {
+    max-width: 32.5rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+
+  .img {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 90vw;
+    gap: 1rem;
+  }
+
+  .form-container {
+    width: 50%;
+  }
+
+  .img {
+    width: 40%;
+  }
+
+  .img img {
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
