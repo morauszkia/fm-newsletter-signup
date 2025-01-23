@@ -68,6 +68,7 @@ main {
 
 .form-container {
   gap: 2.5rem;
+  padding-bottom: 1.75rem;
 }
 
 .container {
@@ -118,7 +119,6 @@ main {
   padding: 1em;
   border: none;
   border-radius: 8px;
-  margin-bottom: 2.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -189,7 +189,7 @@ main {
     background-color: var(--dark-slate-grey);
   }
   main {
-    max-width: 32.5rem;
+    max-width: 100vw;
     border-radius: 2rem;
     padding: 1.5rem;
   }
@@ -198,24 +198,40 @@ main {
     border-radius: 1rem;
     overflow: hidden;
   }
+
+  .attribution {
+    color: var(--grey);
+  }
+
+  .attribution a {
+    color: var(--white);
+  }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   main {
     flex-direction: row-reverse;
     align-items: stretch;
-    justify-content: space-between;
-    flex-grow: 1;
-    max-width: 90vw;
-    gap: 1rem;
+    max-width: min(95vw, 58rem);
+    gap: 1.5rem;
   }
 
   .form-container {
-    width: 50%;
+    padding: 4.625rem 2.5rem;
+    gap: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .text-content {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
   }
 
   .img {
-    width: 40%;
+    width: 25rem;
   }
 
   .img img {
