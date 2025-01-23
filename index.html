@@ -15,11 +15,11 @@
   <body>
 
     <!-- Sign-up form start -->
-    <main>
-      <picture class="img">
+    <main class="main-container" id="main">
+      <picture class="img-container">
         <source media="(max-width: 919)" srcset="./assets/images/illustration-sign-up-mobile.svg">
         <source media="(min-width: 920px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Dashboard illustration">
+        <img class="main-img" src="./assets/images/illustration-sign-up-mobile.svg" alt="Dashboard illustration">
       </picture>
 
       <div class="form-container flex-column">
@@ -40,7 +40,7 @@
             <label class="form-label" for="email">Email address</label>
             <input class="form-input" type="email" placeholder="email@company.com" id="email">
           </div>
-          <button class="btn">Subscribe to monthly newsletter</button>
+          <button class="btn" id="subscribe-btn">Subscribe to monthly newsletter</button>
         </form>
       </div>
 
@@ -58,7 +58,7 @@
           Please open it and click the button inside to confirm your subscription.
         </p>
       </section>
-      <button class="btn success-btn">Dismiss message</button>
+      <button class="btn success-btn" id="dismiss-btn">Dismiss message</button>
     </dialog>
 
     <!-- Success message end -->
