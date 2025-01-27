@@ -98,10 +98,22 @@ body {
     align-items: flex-start;
 }
 
-.form-label {
+.form-input-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-label,
+.form-error {
     font-size: 0.75rem;
     font-weight: 700;
     margin-bottom: 0.75em;
+}
+
+.form-error {
+    color: var(--accent-color);
+    display: none;
 }
 
 .form-input {
@@ -109,6 +121,12 @@ body {
     padding: 1em 1.25em;
     border: 1px solid var(--grey);
     border-radius: 8px;
+}
+
+.form-input.error {
+    border-color: var(--accent-color);
+    background-color: hsl(from var(--accent-color) h s l / 0.15);
+    color: var(--accent-color);
 }
 
 .btn {
