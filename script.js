@@ -26,7 +26,9 @@ const validateEmail = function () {
         "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     );
 
-    if (!emailRegexp.test(enteredEmail)) {
+    if (enteredEmail.trim() === "") {
+        return { status: "error", message: "Email required!" };
+    } else if (!emailRegexp.test(enteredEmail)) {
         return { status: "error", message: "Valid email required!" };
     } else {
         return { status: "ok", message: "" };
