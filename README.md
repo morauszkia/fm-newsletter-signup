@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
--   Solution: [Github repo](https://github.com/morauszkia/fm-newsletter-signup/)
--   Live Site URL: [@Github Pages](https://morauszkia.github.io/fm-newsletter-signup/)
+-   [Solution Repo](https://github.com/morauszkia/fm-newsletter-signup/)
+-   [Live Site URL](https://morauszkia.github.io/fm-newsletter-signup/)
 
 ## My process
 
