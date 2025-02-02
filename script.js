@@ -19,6 +19,16 @@ const hideEmailError = () => {
     emailErrorEl.style.display = "none";
 };
 
+const debounce = (callback, wait) => {
+    let timeoutId = null;
+    return (...args) => {
+        window.clearTimeout(timeoutId);
+        timeoutId = window.setTimeout(() => {
+            callback(...args);
+        }, wait);
+    };
+};
+
 const validateEmail = function () {
     const enteredEmail = emailInput.value;
 
@@ -35,7 +45,7 @@ const validateEmail = function () {
     }
 };
 
-const repeatedEmailValidation = function () {
+const repeatedEmailValidation = debounce(function () {
     const { status, message } = validateEmail();
 
     if (status === "ok") {
@@ -44,7 +54,7 @@ const repeatedEmailValidation = function () {
     } else {
         showEmailError(message);
     }
-};
+}, 1000);
 
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();

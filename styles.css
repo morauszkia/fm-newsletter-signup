@@ -129,6 +129,10 @@ body {
     color: var(--accent-color);
 }
 
+.form-input.error:focus {
+    outline-color: var(--accent-color);
+}
+
 .btn {
     width: 100%;
     background-color: var(--dark-slate-grey);
